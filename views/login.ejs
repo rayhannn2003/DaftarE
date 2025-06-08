@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <ul>
+      <% if(messages.success_msg) { %>
+          <li style="color: green;"><%= messages.success_msg %></li>
+      <% } %>
+    
+    </ul>
+    <ul>
+        <% if(messages.error && messages.error.length > 0) { %>
+            <% messages.error.forEach(function(error) { %>
+                <li style="color: red;"><%= error.message %></li>
+            <% }); %>
+        <% } %>
+        <% if(messages.error_msg) { %>
+            <li style="color: red;"><%= messages.error_msg %></li>
+        <% } %>
+        <% if(messages.info_msg) { %>
+            <li style="color: blue;"><%= messages.info_msg %></li>
+        <% } %>
+        <% if(messages.warning_msg) { %>
+            <li style="color: orange;"><%= messages.warning_msg %></li>
+        <% } %>
+        <% if(messages.success_msg) { %>
+            <li style="color: green;"><%= messages.success_msg %></li>
+        <% } %>     
+    </ul>
+    <form action="/users/login" method="POST">
+         <div>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+        <div>
+            <input type="submit" value="Login">
+        </div>
+        <!--already registered-->
+        <p>Don't have an account? <a href="/users/register">Register here</a></p>
+</body>
+</html>
