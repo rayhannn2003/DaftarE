@@ -1,0 +1,68 @@
+step 1:
+created a folder named DaftarE,
+step 2:
+initialize a new Node.js project by running:
+```bash
+npm init -y
+```
+step 3:
+custom script in package.json:
+```json
+
+{
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  }
+}
+```
+
+step 4:
+```bash
+npm install express
+/*📥 Downloads the express package from the npm registry.
+
+📁 Adds it to the node_modules/ folder inside your project.
+
+📝 Updates your package.json by adding express under the dependencies section.
+
+📘 Creates/updates package-lock.json, which locks the exact versions of all installed packages.
+*/
+
+step 5:
+npm i  -D nodemon
+/*Nodemon is a utility that automatically restarts your Node.js server whenever you save changes to your code.
+It is installed as a development dependency (indicated by the -D flag) because it is not needed in production environments.
+*/
+step 6:npm run dev
+/*This command runs the dev script defined in your package.json, which starts your server using nodemon.
+Nodemon will watch for file changes and automatically restart the server when changes are detected.
+*/  
+step 7:
+npm install ejs
+/*EJS (Embedded JavaScript) is a templating engine that allows you to generate HTML markup with plain JavaScript.
+It is installed as a dependency in your project, enabling you to use EJS templates in your Express application.
+*/
+step 8:
+npm i dotenv pg;
+/*dotenv is a module that loads environment variables from a .env file into process.env, allowing you to manage configuration settings securely.
+pg is a PostgreSQL client for Node.js, enabling your application to interact with PostgreSQL databases.
+Both packages are installed as dependencies in your project.
+*/
+
+step 9:
+npm install bcrypt
+/*bcrypt is a library for hashing passwords securely. It is installed as a dependency in your project, allowing you to hash user passwords before storing them in the database.
+*/
+step 10:
+npm install express-session express-flash
+/*express-session is a middleware for managing user sessions in Express applications, allowing you to store session data on the server.
+express-flash is a middleware that provides flash messages, which are temporary messages that can be displayed to users after certain actions (like form submissions).
+Both packages are installed as dependencies in your project.
+*/
+step 11:
+npm i passport passport-local
+/*passport is an authentication middleware for Node.js, providing a simple and consistent API for handling user authentication.
+passport-local is a Passport strategy for authenticating users using a username and password. It is installed as a dependency in your project, allowing you to implement local authentication in your Express application.
+*/
+step 12:
